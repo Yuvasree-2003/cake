@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Whisk & Wish | Homemade Cakes Crafted with Love</title>
+    <meta name="description" content="Whisk & Wish offers premium homemade cakes, beautifully handcrafted for all your special occasions.">
+    <link rel="stylesheet" href="css/styles.css">
+    <!-- FontAwesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar">
+        <a href="index.html" class="logo">
+            <i class="fa-solid fa-cake-candles" style="color: var(--accent-gold);"></i>
+            Whisk & Wish
+        </a>
+        <ul class="nav-links">
+            <li><a href="#about">About</a></li>
+            <li><a href="#products">Our Products</a></li>
+            <li><a href="#customize">Customize</a></li>
+            <li><a href="#gallery">Gallery</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+        <div class="nav-actions">
+            <i class="fa-solid fa-magnifying-glass" id="search-toggle" title="Search products"></i>
+            <div class="icon-wrapper" id="nav-wishlist" style="position: relative; display: inline-block; cursor: pointer;">
+                <i class="fa-regular fa-heart"></i>
+                <span class="badge-count wishlist-count" style="display: none;">0</span>
+            </div>
+            <div class="icon-wrapper" id="nav-cart" style="position: relative; display: inline-block; margin-left: 0.5rem; cursor: pointer;">
+                <i class="fa-solid fa-cart-shopping"></i>
+                <span class="badge-count cart-count" style="display: none;">0</span>
+            </div>
+            <i class="fa-solid fa-bars menu-toggle" id="menu-toggle-btn" style="margin-left: 0.5rem;"></i>
+        </div>
+    </nav>
+
+    <!-- Mobile Nav Menu -->
+    <div class="mobile-nav" id="mobile-nav">
+        <i class="fa-solid fa-xmark close-mobile-nav"></i>
+        <ul>
+            <li><a href="#about">About</a></li>
+            <li><a href="#products">Our Products</a></li>
+            <li><a href="#customize">Customize</a></li>
+            <li><a href="#gallery">Gallery</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </div>
+    <div class="mobile-nav-overlay" id="mobile-nav-overlay"></div>
+
+    <!-- Search Overlay -->
+    <div class="search-overlay" id="search-overlay">
+        <div class="search-box">
+            <input type="text" id="search-input" placeholder="Search products... (e.g. Brownie, Jar Cake)">
+            <i class="fa-solid fa-xmark close-search"></i>
+        </div>
+        <div class="search-results" id="search-results"></div>
+    </div>
+
+    <!-- Hero Section -->
+    <header class="hero" id="home">
+        <img src="assets/images/background.png" alt="Beautiful Bakery Display" class="hero-bg">
+        <div class="hero-overlay"></div>
+        <div class="hero-content fade-in-up">
+            <h1>Whisk & Wish</h1>
+            <h2>Homemade Cakes Crafted with Love</h2>
+            <p>Freshly baked cakes made with premium ingredients for every special occasion. Make your moments sweeter.</p>
+            <div class="btn-group">
+                <button class="btn btn-primary" onclick="document.getElementById('customize').scrollIntoView();">Order Now</button>
+                <button class="btn btn-secondary" onclick="document.getElementById('products').scrollIntoView();">View Our Products</button>
+            </div>
+        </div>
+    </header>
+
+    <!-- About Section -->
+    <section class="about" id="about">
+        <div class="about-img">
+            <img src="assets/images/about_cake_1785422562479.jpg" alt="Handcrafted Cake">
+        </div>
+        <div class="about-content">
+            <h2 class="section-title" style="text-align: left;">Our Sweet Story</h2>
+            <p>At Whisk & Wish, we believe that every celebration deserves a centerpiece that looks as good as it tastes. We started with a simple passion for baking in a home kitchen, and it has blossomed into a journey of bringing joy to your special moments.</p>
+            <p>Every cake is a labor of love, baked fresh from scratch using the finest, premium ingredients. Whether you're looking for a classic favorite or a custom design, we pour our hearts into every detail.</p>
+            <ul class="features-list">
+                <li><i class="fa-solid fa-check-circle"></i> 100% Homemade</li>
+                <li><i class="fa-solid fa-check-circle"></i> Fresh Ingredients</li>
+                <li><i class="fa-solid fa-check-circle"></i> Eggless Options</li>
+                <li><i class="fa-solid fa-check-circle"></i> Handcrafted Designs</li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- Why Choose Us -->
+    <section class="why-us">
+        <h2 class="section-title">Why Choose Us</h2>
+        <p class="section-subtitle">The ingredients of our success</p>
+        <div class="why-grid">
+            <div class="why-card glass fade-in-up">
+                <i class="fa-solid fa-leaf"></i>
+                <h3>Fresh Ingredients</h3>
+                <p>We source only the best quality butter, pure chocolate, and fresh fruits for our bakes.</p>
+            </div>
+            <div class="why-card glass fade-in-up" style="animation-delay: 0.1s;">
+                <i class="fa-solid fa-palette"></i>
+                <h3>Custom Designs</h3>
+                <p>From whimsical themes to elegant tiered cakes, we bring your vision to life.</p>
+            </div>
+            <div class="why-card glass fade-in-up" style="animation-delay: 0.2s;">
+                <i class="fa-solid fa-crown"></i>
+                <h3>Premium Quality</h3>
+                <p>A luxurious taste experience in every bite, without any compromises.</p>
+            </div>
+            <div class="why-card glass fade-in-up" style="animation-delay: 0.3s;">
+                <i class="fa-solid fa-truck-fast"></i>
+                <h3>Fast Delivery</h3>
+                <p>Carefully transported and delivered safely to your venue in pristine condition.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Cakes -->
+    <section class="featured">
+        <h2 class="section-title" style="color: white;">Signature Bakes</h2>
+        <p class="section-subtitle" style="color: white; margin-bottom: 2rem;">Our most loved premium creations</p>
+        
+        <div class="featured-wrapper">
+            <button class="featured-arrow prev-arrow" id="featured-prev" aria-label="Previous">
+                <i class="fa-solid fa-chevron-left"></i>
+            </button>
+            <!-- Featured cards are rendered dynamically by main.js from featuredProducts in data.js -->
+            <div class="featured-scroll" id="featured-scroll"></div>
+            <button class="featured-arrow next-arrow" id="featured-next" aria-label="Next">
+                <i class="fa-solid fa-chevron-right"></i>
+            </button>
+        </div>
+    </section>
+
+    <!-- Our Products -->
+    <section class="products" id="products">
+        <h2 class="section-title">Our Products</h2>
+        <p class="section-subtitle">Freshly Homemade with Love ❤️</p>
+        
+        <!-- Category cards are rendered dynamically by main.js from categoryCards in data.js -->
+        <div class="products-grid" id="homepage-category-grid"></div>
+    </section>
+
+    <!-- Customize Your Cake -->
+    <section class="customize" id="customize">
+        <div class="order-form-container glass fade-in-up">
+            <h2 class="section-title">Customize Your Cake</h2>
+            <p class="section-subtitle" style="margin-bottom: 2rem;">Tell us what you're dreaming of, and we'll bake it.</p>
+            
+            <form id="customize-form" action="https://formsubmit.co/24022003yuva@gmail.com" method="POST">
+                <input type="hidden" name="_subject" value="New Custom Cake Order!">
+                <input type="hidden" name="_template" value="table">
+                <div class="form-grid">
+                    <div class="form-group">
+                        <label for="name">Your Name</label>
+                        <input type="text" id="name" name="name" required placeholder="Jane Doe">
+                    </div>
+                    <div class="form-group">
+                        <label for="phone">Phone Number</label>
+                        <input type="tel" id="phone" name="phone" required placeholder="+91 98765 43210">
+                    </div>
+                    <div class="form-group full-width">
+                        <label for="email">Email Address</label>
+                        <input type="email" id="email" name="email" required placeholder="jane@example.com">
+                    </div>
+                    <div class="form-group">
+                        <label for="date">Delivery Date</label>
+                        <input type="date" id="date" name="date" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="weight">Cake Weight</label>
+                        <select id="weight" name="weight">
+                            <option value="Bento (300g)">(300g)</option>
+                            <option value="Half Kg (500g)">Half Kg (500g)</option>
+                            <option value="1 Kg">1 Kg</option>
+                            <option value="2 Kg+">2 Kg+</option>
+                            
+                            
+                        </select>
+                    </div>
+                    <div class="form-group full-width">
+                        <label for="flavor">Flavor Selection</label>
+                        <select id="flavor" name="flavor">
+                            <option value="Chocolate Truffle">Chocolate Truffle</option>
+                            <option value="Red Velvet">Red Velvet</option>
+                            <option value="Vanilla">Vanilla</option>
+                            <option value="Butterscotch">Butterscotch</option>
+                            <option value="Mango (Seasonal)">Mango (Seasonal)</option>
+                            <option value="Custom">Custom / Other</option>
+                        </select>
+                    </div>
+                    <div class="form-group full-width">
+                        <label for="special">Message on Cake & Special Instructions</label>
+                        <textarea id="special" name="special" rows="4" placeholder="e.g. 'Happy Birthday Alex', make it eggless..."></textarea>
+                    </div>
+                </div>
+                <div style="text-align: center; margin-top: 2rem;">
+                    <button type="submit" class="btn btn-primary" style="width: 100%; max-width: 300px;">
+                        <i class="fa-solid fa-paper-plane" style="margin-right: 0.5rem;"></i> Send Request
+                    </button>
+                </div>
+            </form>
+        </div>
+    </section>
+
+    <!-- Gallery -->
+    <section class="gallery" id="gallery">
+        <h2 class="section-title">Our Gallery</h2>
+        <p class="section-subtitle">A glimpse of our creations</p>
+        
+        <div class="masonry">
+            <div class="masonry-item">
+                <img src="assets/images/about_cake_1785422562479.jpg" alt="Cake Gallery 1">
+                <div class="masonry-overlay"><i class="fa-brands fa-instagram"></i></div>
+            </div>
+            <div class="masonry-item">
+                <img src="assets/images/chocolate_truffle_1785422575374.jpg" alt="Cake Gallery 2">
+                <div class="masonry-overlay"><i class="fa-brands fa-instagram"></i></div>
+            </div>
+            <div class="masonry-item">
+                <img src="assets/images/brownie_tub_1785422590777.jpg" alt="Cake Gallery 3">
+                <div class="masonry-overlay"><i class="fa-brands fa-instagram"></i></div>
+            </div>
+            <div class="masonry-item">
+                <img src="assets/images/background.png" alt="Cake Gallery 4">
+                <div class="masonry-overlay"><i class="fa-brands fa-instagram"></i></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="testimonials">
+        <h2 class="section-title">Sweet Words</h2>
+        <p class="section-subtitle">What our happy customers say</p>
+        
+        <div class="carousel">
+            <div class="testimonial-card active">
+                <div class="stars">
+                    <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                </div>
+                <p class="testimonial-text">"Absolutely delicious and beautifully designed! The chocolate truffle cake was moist, rich, and a huge hit at our party."</p>
+                <h4>- Priya M.</h4>
+            </div>
+            <div class="testimonial-card">
+                <div class="stars">
+                    <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                </div>
+                <p class="testimonial-text">"The customized cake looked exactly like the reference I sent. And it tasted even better than it looked!"</p>
+                <h4>- Arjun S.</h4>
+            </div>
+            <div class="testimonial-card">
+                <div class="stars">
+                    <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star-half-stroke"></i>
+                </div>
+                <p class="testimonial-text">"Highly recommend Whisk & Wish. The Kunafa Pistachio Brownie is to die for. Will definitely be ordering again!"</p>
+                <h4>- Sneha R.</h4>
+            </div>
+            
+            <div class="carousel-dots">
+                <span class="dot active"></span>
+                <span class="dot"></span>
+                <span class="dot"></span>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ & Contact -->
+    <section class="contact-section" id="contact">
+        <h2 class="section-title">Get In Touch</h2>
+        <p class="section-subtitle">We're here to help make your day special</p>
+        
+        <div class="contact-grid">
+            <!-- FAQ Accordion -->
+            <div class="faq fade-in-up">
+                <h3 style="font-size: 1.8rem; margin-bottom: 2rem; font-family: var(--font-heading);">Frequently Asked Questions</h3>
+                
+                <div class="accordion-item">
+                    <div class="accordion-header">
+                        How many days before should I book?
+                        <i class="fa-solid fa-plus"></i>
+                    </div>
+                    <div class="accordion-content">
+                        <p>We recommend placing orders at least 2-3 days in advance. For elaborate custom or wedding cakes, please reach out 1-2 weeks prior to ensure availability.</p>
+                    </div>
+                </div>
+                
+                <div class="accordion-item">
+                    <div class="accordion-header">
+                        Do you make eggless cakes?
+                        <i class="fa-solid fa-plus"></i>
+                    </div>
+                    <div class="accordion-content">
+                        <p>Yes, absolutely! We offer delicious eggless options for almost all of our cake flavors upon request.</p>
+                    </div>
+                </div>
+                
+                <div class="accordion-item">
+                    <div class="accordion-header">
+                        Do you deliver?
+                        <i class="fa-solid fa-plus"></i>
+                    </div>
+                    <div class="accordion-content">
+                        <p>Yes, we provide safe and secure delivery within Chennai. Delivery charges apply based on the distance from our location in East Tambaram.</p>
+                    </div>
+                </div>
+                
+                <div class="accordion-item">
+                    <div class="accordion-header">
+                        Can I customize my cake?
+                        <i class="fa-solid fa-plus"></i>
+                    </div>
+                    <div class="accordion-content">
+                        <p>We love creating custom designs! Please use our 'Customize Your Cake' form to share your ideas, reference images, and requirements.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Contact Info & Map -->
+            <div class="contact-info glass fade-in-up">
+                <div class="contact-item">
+                    <i class="fa-solid fa-location-dot"></i>
+                    <div>
+                        <h4>Address</h4>
+                        <p>70, Buddar Street,<br>East Tambaram,<br>Chennai – 600059</p>
+                    </div>
+                </div>
+                <div class="contact-item">
+                    <i class="fa-solid fa-phone"></i>
+                    <div>
+                        <h4>Phone</h4>
+                        <p><a href="tel:+917305600109">+91 7305600109</a></p>
+                    </div>
+                </div>
+                <div class="contact-item">
+                    <i class="fa-solid fa-envelope"></i>
+                    <div>
+                        <h4>Email</h4>
+                        <p><a href="mailto:24022003yuva@gmail.com">24022003yuva@gmail.com</a></p>
+                    </div>
+                </div>
+                
+                
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-grid">
+            <div class="footer-col" style="flex: 2; min-width: 300px;">
+                <div class="footer-logo">Whisk & Wish</div>
+                <p style="margin-bottom: 1.5rem; opacity: 0.8; max-width: 300px;">Homemade Cakes Crafted with Love. Making every occasion sweeter with our premium, handcrafted desserts.</p>
+                <div class="social-links">
+                    <a href="https://www.instagram.com/the_whiskandwish?igsh=MW5uNzB3aGY0ZzEzMQ==" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="https://wa.me/917305600109" target="_blank"><i class="fa-brands fa-whatsapp"></i></a>
+                </div>
+            </div>
+            
+            <div class="footer-col">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="#about">About Us</a></li>
+                    <li><a href="#products">Our Products</a></li>
+                    <li><a href="#customize">Customize Cake</a></li>
+                    <li><a href="#gallery">Gallery</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-col">
+                <h4>Support</h4>
+                <ul>
+                    <li><a href="#contact">FAQ</a></li>
+                    <li><a href="#contact">Contact Us</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Terms of Service</a></li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            <p>&copy; 2026 Whisk & Wish. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Floating Buttons -->
+    <a href="#" class="whatsapp-float" id="wa-order-btn" title="Order on WhatsApp">
+        <i class="fa-brands fa-whatsapp"></i>
+    </a>
+    
+    <div class="scroll-top">
+        <i class="fa-solid fa-arrow-up"></i>
+    </div>
+
+    <!-- Cart Sidebar -->
+    <div class="cart-sidebar" id="cart-sidebar">
+        <div class="cart-header">
+            <h3>Your Cart</h3>
+            <i class="fa-solid fa-xmark close-cart" style="cursor: pointer; font-size: 1.5rem;"></i>
+        </div>
+        <div class="cart-items" id="cart-items">
+            <!-- Items will be injected here via JS -->
+        </div>
+        <div class="cart-footer">
+            <div class="cart-total">
+                <span>Total:</span>
+                <span id="cart-total-price">₹0</span>
+            </div>
+            <button class="btn btn-primary" id="checkout-btn" style="width: 100%;">Checkout via WhatsApp</button>
+        </div>
+    </div>
+    <div class="cart-overlay" id="cart-overlay"></div>
+
+    <!-- Wishlist Modal -->
+    <div class="wishlist-modal-container" id="wishlist-modal">
+        <div class="wishlist-modal-content glass">
+            <div class="wishlist-header" style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1.5rem;">
+                <h2>Your Wishlist <i class="fa-solid fa-heart" style="color: var(--accent-gold);"></i></h2>
+                <i class="fa-solid fa-xmark close-wishlist" style="cursor: pointer; font-size: 1.5rem;"></i>
+            </div>
+            <div class="wishlist-items" id="wishlist-items" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem;">
+                <!-- Items will be injected here -->
+            </div>
+        </div>
+    </div>
+
+    
+
+    <script src="js/data.js"></script>
+    <script src="js/store.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>

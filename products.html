@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Products | Whisk & Wish</title>
+    <meta name="description" content="Browse our delicious selection of cakes, pastries, and more.">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body class="products-page">
+    <nav class="navbar">
+        <a href="index.html" class="logo">
+            <i class="fa-solid fa-cake-candles" style="color: var(--accent-gold);"></i>
+            Whisk & Wish
+        </a>
+        <ul class="nav-links">
+            <li><a href="index.html#about">About</a></li>
+            <li><a href="index.html#products">Our Products</a></li>
+            <li><a href="index.html#customize">Customize</a></li>
+            <li><a href="index.html#gallery">Gallery</a></li>
+            <li><a href="index.html#contact">Contact</a></li>
+        </ul>
+        <div class="nav-actions">
+            <i class="fa-solid fa-magnifying-glass" id="search-toggle" title="Search products"></i>
+            <div class="icon-wrapper" id="nav-wishlist" style="position: relative; display: inline-block; cursor: pointer;">
+                <i class="fa-regular fa-heart"></i>
+                <span class="badge-count wishlist-count" style="display: none;">0</span>
+            </div>
+            <div class="icon-wrapper" id="nav-cart" style="position: relative; display: inline-block; margin-left: 0.5rem; cursor: pointer;">
+                <i class="fa-solid fa-cart-shopping"></i>
+                <span class="badge-count cart-count" style="display: none;">0</span>
+            </div>
+            <i class="fa-solid fa-bars menu-toggle" id="menu-toggle-btn" style="margin-left: 0.5rem;"></i>
+        </div>
+    </nav>
+
+    <!-- Mobile Nav Menu -->
+    <div class="mobile-nav" id="mobile-nav">
+        <i class="fa-solid fa-xmark close-mobile-nav"></i>
+        <ul>
+            <li><a href="index.html#about">About</a></li>
+            <li><a href="index.html#products">Our Products</a></li>
+            <li><a href="index.html#customize">Customize</a></li>
+            <li><a href="index.html#gallery">Gallery</a></li>
+            <li><a href="index.html#contact">Contact</a></li>
+        </ul>
+    </div>
+    <div class="mobile-nav-overlay" id="mobile-nav-overlay"></div>
+
+    <!-- Search Overlay -->
+    <div class="search-overlay" id="search-overlay">
+        <div class="search-box">
+            <input type="text" id="search-input" placeholder="Search products... (e.g. Brownie, Jar Cake)">
+            <i class="fa-solid fa-xmark close-search"></i>
+        </div>
+        <div class="search-results" id="search-results"></div>
+    </div>
+
+    <header class="page-header">
+        <div class="breadcrumb-bar">
+            <a href="index.html" class="back-home-btn">
+                <i class="fa-solid fa-arrow-left"></i> Back to Home
+            </a>
+        </div>
+        <h1 class="fade-in-up">Our Products</h1>
+        <p class="fade-in-up" style="animation-delay: 0.1s;">Freshly baked and handcrafted with love</p>
+    </header>
+
+    <div class="products-page-container fade-in-up" style="animation-delay: 0.2s;">
+        <!-- Mobile Filter Toggle -->
+        <button class="mobile-filter-toggle" id="mobile-filter-toggle">
+            <i class="fa-solid fa-sliders"></i> Filters
+        </button>
+        <div class="mobile-filter-overlay" id="mobile-filter-overlay"></div>
+        <!-- Sidebar Filters -->
+        <aside class="filters-sidebar glass" id="filters-sidebar">
+            <div class="filters-header">
+                <h3>Filters</h3>
+                <i class="fa-solid fa-xmark close-filters" id="close-filters"></i>
+            </div>
+
+            <!-- Customization Note replaces egg/eggless filter -->
+            <div class="filter-group">
+                <div class="customization-note">
+                    <i class="fa-solid fa-circle-info"></i>
+                    <div>
+                        <strong>Egg Preference?</strong>
+                        <p>All items can be made <em>eggless</em> on request. Just mention it when you place your order!</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="filter-group">
+                <h4>Categories</h4>
+                <ul id="category-list" class="category-filter-list"></ul>
+            </div>
+        </aside>
+
+        <!-- Product Grid -->
+        <main class="products-main">
+            <div class="active-filters" id="active-filters"></div>
+            <div class="products-grid" id="product-grid">
+                <!-- Products injected here -->
+            </div>
+        </main>
+    </div>
+
+    <footer>
+        <div class="footer-grid">
+            <div class="footer-col" style="flex: 2; min-width: 300px;">
+                <div class="footer-logo">Whisk & Wish</div>
+                <p style="margin-bottom: 1.5rem; opacity: 0.8; max-width: 300px;">Homemade Cakes Crafted with Love. Making every occasion sweeter with our premium, handcrafted desserts.</p>
+                <div class="social-links">
+                    <a href="https://www.instagram.com/the_whiskandwish?igsh=MW5uNzB3aGY0ZzEzMQ==" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="https://wa.me/917305600109" target="_blank"><i class="fa-brands fa-whatsapp"></i></a>
+                </div>
+            </div>
+            
+            <div class="footer-col">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="#about">About Us</a></li>
+                    <li><a href="#products">Our Products</a></li>
+                    <li><a href="#customize">Customize Cake</a></li>
+                    <li><a href="#gallery">Gallery</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-col">
+                <h4>Support</h4>
+                <ul>
+                    <li><a href="#contact">FAQ</a></li>
+                    <li><a href="#contact">Contact Us</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Terms of Service</a></li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            <p>&copy; 2026 Whisk & Wish. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Floating Buttons -->
+    <a href="#" class="whatsapp-float" id="wa-order-btn" title="Order on WhatsApp">
+        <i class="fa-brands fa-whatsapp"></i>
+    </a>
+    
+    <div class="scroll-top">
+        <i class="fa-solid fa-arrow-up"></i>
+    </div>
+
+    <!-- Cart Sidebar -->
+    <div class="cart-sidebar" id="cart-sidebar">
+        <div class="cart-header">
+            <h3>Your Cart</h3>
+            <i class="fa-solid fa-xmark close-cart" style="cursor: pointer; font-size: 1.5rem;"></i>
+        </div>
+        <div class="cart-items" id="cart-items">
+            <!-- Items will be injected here via JS -->
+        </div>
+        <div class="cart-footer">
+            <div class="cart-total">
+                <span>Total:</span>
+                <span id="cart-total-price">₹0</span>
+            </div>
+            <button class="btn btn-primary" id="checkout-btn" style="width: 100%;">Checkout via WhatsApp</button>
+        </div>
+    </div>
+    <div class="cart-overlay" id="cart-overlay"></div>
+
+    <!-- Wishlist Modal -->
+    <div class="wishlist-modal-container" id="wishlist-modal">
+        <div class="wishlist-modal-content glass">
+            <div class="wishlist-header" style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1.5rem;">
+                <h2>Your Wishlist <i class="fa-solid fa-heart" style="color: var(--accent-gold);"></i></h2>
+                <i class="fa-solid fa-xmark close-wishlist" style="cursor: pointer; font-size: 1.5rem;"></i>
+            </div>
+            <div class="wishlist-items" id="wishlist-items" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem;">
+                <!-- Items will be injected here -->
+            </div>
+        </div>
+    </div>
+
+    
+
+    <script src="js/store.js"></script>
+    <script src="js/data.js"></script>
+    <script src="js/products.js"></script>
+
+</body>
+</html>
